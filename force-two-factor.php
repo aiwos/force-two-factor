@@ -12,7 +12,7 @@
  * Plugin URI: https://github.com/aiwos/force-two-factor
  * Description: Redirects any user which hasn't setup two factor authentication yet to /2fa/. Use together with the forked two-factor plugin at https://github.com/aiwos/two-factor featuring the frontend totp activation shortcode.
  * Author: Aiwos, Jurriaan Koops
- * Version: 1.0
+ * Version: 1.0.1
  * Author URI: https://aiwos.com
  * Text Domain: force-two-factor
  */
@@ -42,7 +42,7 @@ add_action(
 
 				// Redirect top /2fa/ if any other page than the 2fa page is being requested.
 				if ( ! ( $_SERVER['REQUEST_URI'] === '/2fa' || $_SERVER['REQUEST_URI'] === '/2fa/' ) ) {
-					wp_safe_redirect( site_url( '2fa/' ) );
+					wp_safe_redirect( home_url( '2fa/' ) );
 					exit();
 				}
 			}
