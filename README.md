@@ -8,3 +8,6 @@ Instructions:
 - Now every user which hasn't set up a two factor authentication is automatically redirected to 'siteurl/2fa/'.
 - use 'aiwos/force-two-factor/force-2fa-condition' filter to add additional redirect conditions (don't redirect if false).
 
+== changelog ==
+v1.0.1
+- Use home_url in stead of site_url to support Bedrock sites.
